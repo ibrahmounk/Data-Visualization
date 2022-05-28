@@ -45,4 +45,6 @@ d3.select("body").selectAll("h2")
     .data(dataset)
     .enter()
     .append("h2")
-    .text((d) => d + ' USD');
+    .text((d) => d + ' USD')
+    // Add the style() method to the code in the editor to make all the displayed text have a font-family of verdana.
+    .style("font-family", "verdana");
