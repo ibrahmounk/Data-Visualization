@@ -47,4 +47,20 @@ d3.select("body").selectAll("h2")
     .append("h2")
     .text((d) => d + ' USD')
     // Add the style() method to the code in the editor to make all the displayed text have a font-family of verdana.
-    .style("font-family", "verdana");
+    // .style("font-family", "verdana");
+
+
+
+
+// Add the style() method to the code in the editor to set the color of the h2 elements conditionally. Write the callback function so if the data value is less than 20, it returns red, otherwise it returns green.
+
+// Note: You can use if-else logic, or the ternary operator.
+
+
+.style("color", (d) => {
+    if (d < 20) {
+        return "red"
+    } else if (d > 20) {
+        return "green"
+    }
+});
