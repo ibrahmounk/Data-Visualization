@@ -39,15 +39,15 @@ Select the body node, then select all h2 elements. Have D3 create and append an 
 Change the text() method so that each h2 element displays the corresponding value from the dataset array with a single space and the string USD. For example, the first heading should be 12 USD.
 */
 
-const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+// const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-d3.select("body").selectAll("h2")
-    .data(dataset)
-    .enter()
-    .append("h2")
-    .text((d) => d + ' USD')
-    // Add the style() method to the code in the editor to make all the displayed text have a font-family of verdana.
-    // .style("font-family", "verdana");
+// d3.select("body").selectAll("h2")
+//     .data(dataset)
+//     .enter()
+//     .append("h2")
+//     .text((d) => d + ' USD')
+// Add the style() method to the code in the editor to make all the displayed text have a font-family of verdana.
+// .style("font-family", "verdana");
 
 
 
@@ -56,11 +56,21 @@ d3.select("body").selectAll("h2")
 
 // Note: You can use if-else logic, or the ternary operator.
 
+// .style("color", (d) => {
+//     if (d < 20) {
+//         return "red"
+//     } else if (d > 20) {
+//         return "green"
+//     }
+// });
 
-.style("color", (d) => {
-    if (d < 20) {
-        return "red"
-    } else if (d > 20) {
-        return "green"
-    }
-});
+
+//  Add the attr() method to the code in the editor and put a class of bar on the div elements.
+
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+d3.select("body").selectAll("div")
+    .data(dataset)
+    .enter()
+    .append("div")
+    .attr("class", "bar")
